@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #622bc9;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.header p {
+  margin-top: 10px;
+}
+
+/* MENU */
+
+.menu {
+  background-color: #a891e7;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* CATEGORIAS */
+
+.categorias {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.categorias h2,
+.productos h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.categoria-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.categoria-card:hover {
+  transform: translateY(-5px);
+}
+
+/* PRODUCTOS */
+
+.productos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.producto-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(212, 23, 23, 0.12);
+  transition: 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-7px);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.producto-card h3 {
+  font-size: 21px;
+  margin: 15px 0 8px;
+}
+
+.categoria {
+  color: #666;
+}
+
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.descuento {
+  background-color: #ffe0e0;
+  color: #d00000;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.disponible {
+  color: green;
+  font-weight: bold;
+}
+
+.agotado {
+  color: red;
+  font-weight: bold;
+}
+
+.producto-card button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.producto-card button:hover {
+  background-color: #555;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #6313be;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.footer h3 {
+  margin: 0 0 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categorias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .productos-grid,
+  .categorias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    padding: 15px;
+    background-color: #d8b4fe;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4c1d95; 
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #581c87;
+    color: white;
+}
+
+
+section h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+.fondo-ficha {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ficha-producto {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    width: 850px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.imagen-ficha {
+    width: 45%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+}
+
+.imagen-ficha img {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.informacion-ficha {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    padding-top: 12px;
+}
+
+.informacion-ficha h2 {
+    margin: 8px 0 15px;
+    font-size: 28px;
+    text-align: left;
+}
+
+.precio-ficha {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    color: #111827;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.cerrar:hover {
+    background-color: #d1d5db;
+}
+
+
+/* Estilos del Buscador y Filtros */
+.contenedor-buscador {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 25px auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-filtro {
+    display: flex;
+    gap: 10px;
+}
+
+.input-busqueda {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-busqueda:focus {
+    border-color: #7c3aed;
+}
+
+.boton-limpiar {
+    padding: 10px 16px;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.grupo-selects {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filtro-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filtro-item label {
+    font-weight: bold;
+    color: #374151;
+}
+
+.filtro-item select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+}
