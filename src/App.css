@@ -328,7 +328,8 @@ section h2 {
 }
 
 
-/* Estilos del Buscador y Filtros */
+/*Buscador y Filtros*/
+
 .contenedor-buscador {
     background-color: white;
     padding: 20px;
@@ -392,4 +393,238 @@ section h2 {
     border-radius: 6px;
     border: 1px solid #d1d5db;
     background-color: white;
+}
+
+
+.contenedor-buscador {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  margin: 30px auto;
+  max-width: 850px;
+  border: 1px solid #f3e8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titulo-buscador {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #581c87;
+  text-align: left;
+  margin-bottom: -5px;
+}
+
+.grupo-filtro-principal {
+  width: 100%;
+}
+
+.caja-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icono-buscar {
+  position: absolute;
+  left: 14px;
+  font-size: 1rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.input-busqueda {
+  width: 100%;
+  padding: 12px 40px 12px 42px;
+  font-size: 15px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f9fafb;
+  transition: all 0.25s ease;
+  color: #1f2937;
+}
+
+.input-busqueda:focus {
+  background-color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+}
+
+.boton-limpiar {
+  position: absolute;
+  right: 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.boton-limpiar:hover {
+  background-color: #dc2626;
+}
+
+.grupo-selects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.filtro-item label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.caja-select {
+  position: relative;
+}
+
+.filtro-item select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e5e7eb;
+  background-color: #f9fafb;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filtro-item select:focus {
+  background-color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+/* =====================================
+   DISEÑO COMPACTO Y UNIFICADO DE CLIENTES
+===================================== */
+.seccion-clientes-frecuentes,
+.seccion-clientes-recientes,
+.seccion-clientes-vip {
+  margin: 20px auto;
+  max-width: 850px;
+}
+
+.clientes-contenedor {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.contenedor-vip {
+  border: 1px solid #fef08a !important;
+  background: #fffbeb !important;
+}
+
+.encabezado-seccion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.encabezado-seccion .icono-seccion {
+  font-size: 1.1rem;
+}
+
+.encabezado-seccion h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #4c1d95;
+  margin: 0;
+}
+
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.cliente-card {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.cliente-card:hover {
+  background: #ffffff;
+  border-color: #ddd6fe;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+}
+
+.avatar-cliente {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #7c3aed;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.avatar-reciente {
+  background-color: #059669 !important;
+}
+
+.avatar-vip {
+  background: #d97706 !important;
+}
+
+.tarjeta-vip {
+  border: 1px solid #fef08a !important;
+  background-color: #ffffff;
+}
+
+.info-cliente h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 2px 0;
+  text-align: left;
+}
+
+.compras-badge {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin: 0;
+  text-align: left;
+}
+
+.badge-vip {
+  color: #b45309 !important;
 }

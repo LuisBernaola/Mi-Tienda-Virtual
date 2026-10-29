@@ -83,13 +83,12 @@ function App() {
     { id: 5, nombre: "Pedro Sánchez", compras: 10, fechaRegistro: "2026-07-20" }
   ];
 
-  const productosFiltrados = productos.filter((producto) => {
-    const coincideNombre = producto.nombre.toLowerCase().includes(busqueda.toLowerCase());
-    const coincideCategoria = categoria === "Todas" || producto.categoria === categoria;
-    const coincidePrecio = precioMaximo === "Todos" || producto.precio <= Number(precioMaximo);
-
-    return coincideNombre && coincideCategoria && coincidePrecio;
-  });
+  const productosFiltrados = productos.filter(
+    producto =>
+      producto.nombre.toLowerCase().includes(busqueda.toLowerCase()) &&
+      (categoria === "Todas" || producto.categoria === categoria) &&
+      (precioMaximo === "Todos" || producto.precio < Number(precioMaximo))
+  );
 
   return (
     <div>
@@ -109,7 +108,6 @@ function App() {
         />
         
         <Producto productos={productosFiltrados} onVerProducto={setProductoSeleccionado} />
-        
         <ProductosEconomicos productos={productos} />
         
         <ClientesRecientes clientes={clientes} />
